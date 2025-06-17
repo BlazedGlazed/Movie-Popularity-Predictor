@@ -1,0 +1,52 @@
+This script predicts the popularity score of a new movie based on its YouTube video statistics and sentiment analysis of its comments, using a regression model trained on historical movie data.
+
+📁 File Location
+Place run_prediction.py in the root directory of your project.
+
+✅ Features
+Collects:
+
+Views, likes, and comment count using yt_stats.py
+
+Comments using comment_scraper.py
+
+Sentiment score using sentiment.py
+
+Trains a Linear Regression model using movie_data.csv
+
+Predicts and displays the popularity score of the given video
+
+
+
+
+🔑 API Key Setup (Required)
+To run this project, you’ll need a valid YouTube Data API v3 key.
+
+📌 Steps to Set It Up
+Get your API key
+
+Visit the Google Cloud Console
+
+Create a new project (or use an existing one)
+
+Enable the YouTube Data API v3
+
+Create an API key and copy it
+
+Create a file config.py in the root folder.
+
+Paste the following code inside api_key.py:
+
+python
+Copy
+Edit
+YOUTUBE_API_KEY = "YOUR_API_KEY_HERE"
+Replace "YOUR_API_KEY_HERE" with your actual API key.
+
+✅ This file is used internally by the project — specifically in scripts that access YouTube data like yt_stats.py and comment_scraper.py.
+
+❗ api_key.py is included in .gitignore and should not be pushed to GitHub for security reasons.
+
+
+
+⚠️ Note: This project was built iteratively over time, and the current file structure may require manual adjustments (e.g., modifying import paths) to run correctly. The core logic and code are intact, but some environment-specific tweaking may be needed.
